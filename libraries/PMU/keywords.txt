@@ -1,0 +1,45 @@
+#######################################
+# Syntax Coloring Map For Ultrasound
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+sleep			KEYWORD2
+addWakeupPin		KEYWORD2
+removeWakeupPin		KEYWORD2
+pullupUnusedPin		KEYWORD2
+PMU			KEYWORD2
+set_lvd     KEYWORD2
+soft_reset  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+PM_IDLE		LITERAL1
+PM_POWERDWN		LITERAL1
+PM_POFFS0		LITERAL1
+PM_POFFS1		LITERAL1
+SLEEP_FOREVER		LITERAL1
+SLEEP_16MS		LITERAL1
+SLEEP_32MS		LITERAL1
+SLEEP_64MS		LITERAL1
+SLEEP_128MS		LITERAL1
+SLEEP_256MS		LITERAL1
+SLEEP_512MS		LITERAL1
+SLEEP_1S		LITERAL1
+SLEEP_2S		LITERAL1
+SLEEP_4S		LITERAL1
+SLEEP_8S		LITERAL1
+PM_LVD_1V8      LITERAL1
+PM_LVD_2V2      LITERAL1
+PM_LVD_2V5      LITERAL1
+PM_LVD_2V9      LITERAL1
+PM_LVD_3V2      LITERAL1
+PM_LVD_3V6      LITERAL1
+PM_LVD_4V0      LITERAL1
+PM_LVD_4V4      LITERAL1

@@ -1,0 +1,220 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+# Menu options
+menu.clock_source=Clock Source
+menu.clock=CPU Frequency
+menu.variant=Variant
+menu.eerom_size=EEROM Size
+menu.upload_speed=Upload Speed
+#menu.arduino_isp=Arduino as ISP
+
+#############################
+#### OSOYOO LGT Uno     ####
+#############################
+
+Mango.name= OSOYOO LGT Uno
+Mango.upload.tool=avrdude
+Mango.upload.protocol=arduino
+Mango.build.eerom_size=1
+Mango.upload.maximum_size=30720
+Mango.upload.maximum_data_size=2048
+Mango.upload.speed=115200
+Mango.bootloader.tool=avrdude
+Mango.bootloader.high_fuses=0xff
+Mango.bootloader.low_fuses=0xff
+Mango.bootloader.extended_fuses=0x07
+Mango.bootloader.path=lgt8fx8p
+Mango.bootloader.file=lgt8fx8p/optiboot_lgt8f328p_115200_int32M.hex
+Mango.bootloader.unlock_bits=0x3f
+Mango.bootloader.lock_bits=0x3f
+Mango.build.mcu=atmega328p
+Mango.build.clock_source=4
+Mango.build.f_cpu=16000000L
+Mango.build.core=lgt8f
+Mango.build.variant=lgt8fx8p
+Mango.build.board=AVR_LARDU_328E
+
+#############################
+#### Nano     ####
+#############################
+
+Nano.name= OSOYOO LGT-Nano/Maker-Nano
+Nano.vid.0=0x2341
+Nano.pid.0=0x0137
+
+Nano.upload.tool=avrdude
+Nano.upload.protocol=arduino
+Nano.build.eerom_size=1
+Nano.upload.maximum_size=30720
+Nano.upload.maximum_data_size=2048
+Nano.upload.speed=115200
+Nano.bootloader.tool=avrdude
+Nano.bootloader.high_fuses=0xff
+Nano.bootloader.low_fuses=0xff
+Nano.bootloader.extended_fuses=0x07
+Nano.bootloader.path=lgt8fx8p
+Nano.bootloader.file=lgt8fx8p/optiboot_lgt8f328p_115200_int32M.hex
+Nano.bootloader.unlock_bits=0x3f
+Nano.bootloader.lock_bits=0x3f
+Nano.build.mcu=atmega328p
+Nano.build.clock_source=1
+Nano.build.f_cpu=16000000L
+Nano.build.core=lgt8f
+Nano.build.variant=lgt8fx8p
+Nano.build.board=AVR_LARDU_328E
+
+#############################
+#### OSOYOO Mini-Nano      ####
+#############################
+
+Mini.name= OSOYOO Mini-Nano
+Mini.upload.tool=avrdude
+Mini.upload.protocol=arduino
+Mini.build.eerom_size=1
+Mini.upload.maximum_size=30720
+Mini.upload.maximum_data_size=2048
+Mini.upload.speed=57600
+Mini.bootloader.tool=avrdude
+Mini.bootloader.high_fuses=0xff
+Mini.bootloader.low_fuses=0xff
+Mini.bootloader.extended_fuses=0x07
+Mini.bootloader.path=lgt8fx8ps20
+Mini.bootloader.file=lgt8fx8ps20/optiboot_lgt8f328p.hex
+Mini.bootloader.unlock_bits=0x3f
+Mini.bootloader.lock_bits=0x3f
+Mini.build.mcu=atmega328p
+Mini.build.clock_source=1
+Mini.build.f_cpu=16000000L
+Mini.build.core=lgt8f
+Mini.build.variant=lgt8fx8p
+Mini.build.board=AVR_LARDU_328E
+
+#############################
+#### OSOYOO Orion      ####
+#############################
+Orion.name= OSOYOO Orion
+Orion.upload.tool=avrdude
+Orion.upload.protocol=arduino
+Orion.build.eerom_size=1
+Orion.upload.maximum_size=30720
+Orion.upload.maximum_data_size=2048
+Orion.upload.speed=57600
+Orion.bootloader.tool=avrdude
+Orion.bootloader.high_fuses=0xff
+Orion.bootloader.low_fuses=0xff
+Orion.bootloader.extended_fuses=0x07
+Orion.bootloader.path=lgt8fx8p48
+Orion.bootloader.file=lgt8fx8p48/optiboot_lgt8f328p.hex
+Orion.bootloader.unlock_bits=0x3f
+Orion.bootloader.lock_bits=0x3f
+Orion.build.mcu=atmega328p
+Orion.build.clock_source=2
+Orion.build.f_cpu=32000000L
+#Orion.build.f_cpu=16000000L
+Orion.build.core=lgt8f
+Orion.build.variant=lgt8fx8p48
+Orion.build.board=AVR_LARDU_328E
+
+#############################
+#### Diy Board     ####
+#############################
+Diy.name= DIY Board
+Diy.upload.tool=avrdude
+Diy.upload.protocol=arduino
+Diy.upload.maximum_data_size=2048
+Diy.bootloader.tool=avrdude
+Diy.bootloader.high_fuses=0xff
+Diy.bootloader.low_fuses=0xff
+Diy.bootloader.extended_fuses=0x07
+Diy.bootloader.unlock_bits=0x3f
+Diy.bootloader.lock_bits=0x3f
+Diy.build.mcu=atmega328p
+Diy.build.core=lgt8f
+Diy.build.board=AVR_LARDU_328E
+
+# EEROM size
+Diy.menu.eerom_size.0KB=0KB
+Diy.menu.eerom_size.0KB.build.eerom_size=0
+Diy.menu.eerom_size.0KB.upload.maximum_size=32256
+Diy.menu.eerom_size.1KB=1KB
+Diy.menu.eerom_size.1KB.build.eerom_size=1
+Diy.menu.eerom_size.1KB.upload.maximum_size=30720
+Diy.menu.eerom_size.2KB=2KB
+Diy.menu.eerom_size.2KB.build.eerom_size=2
+Diy.menu.eerom_size.2KB.upload.maximum_size=29696
+Diy.menu.eerom_size.4KB=4KB
+Diy.menu.eerom_size.4KB.build.eerom_size=4
+Diy.menu.eerom_size.4KB.upload.maximum_size=24576
+Diy.menu.eerom_size.8KB=8KB
+Diy.menu.eerom_size.8KB.build.eerom_size=8
+Diy.menu.eerom_size.8KB.upload.maximum_size=16384
+
+# Clock source
+Diy.menu.clock_source.internal_32M=Internal (32MHz)
+Diy.menu.clock_source.internal_32M.build.clock_source=1
+Diy.menu.clock_source.external_32M=External (32MHz)
+Diy.menu.clock_source.external_32M.build.clock_source=2
+Diy.menu.clock_source.external_24M=External (24MHz)
+Diy.menu.clock_source.external_24M.build.clock_source=3
+Diy.menu.clock_source.external_16M=External (16MHz)
+Diy.menu.clock_source.external_16M.build.clock_source=4
+Diy.menu.clock_source.external_12M=External (12MHz)
+Diy.menu.clock_source.external_12M.build.clock_source=5
+Diy.menu.clock_source.external_8M=External (8MHz） 
+Diy.menu.clock_source.external_8M.build.clock_source=6
+Diy.menu.clock_source.external_4M=External (4MHz） 
+Diy.menu.clock_source.external_4M.build.clock_source=7
+Diy.menu.clock_source.external_2M=External (2MHz） 
+Diy.menu.clock_source.external_2M.build.clock_source=8
+Diy.menu.clock_source.external_1M=External (1MHz） 
+Diy.menu.clock_source.external_1M.build.clock_source=9
+Diy.menu.clock_source.external_400K=External (400KHz） 
+Diy.menu.clock_source.external_400K.build.clock_source=10
+Diy.menu.clock_source.external_32K=External (32KHz)
+Diy.menu.clock_source.external_32K.build.clock_source=11
+Diy.menu.clock_source.internal_32K=Internal (32KHz)
+Diy.menu.clock_source.internal_32K.build.clock_source=0
+
+# Clock frequencies
+Diy.menu.clock.32MHz=32 MHz
+Diy.menu.clock.32MHz.build.f_cpu=32000000L
+Diy.menu.clock.24MHz=24 MHz
+Diy.menu.clock.24MHz.build.f_cpu=24000000L
+Diy.menu.clock.16MHz=16 MHz
+Diy.menu.clock.16MHz.build.f_cpu=16000000L
+Diy.menu.clock.12MHz=12 MHz
+Diy.menu.clock.12MHz.build.f_cpu=12000000L
+Diy.menu.clock.8MHz=8 MHz
+Diy.menu.clock.8MHz.build.f_cpu=8000000L
+Diy.menu.clock.4MHz=4 MHz
+Diy.menu.clock.4MHz.build.f_cpu=4000000L
+Diy.menu.clock.2MHz=2 MHz
+Diy.menu.clock.2MHz.build.f_cpu=2000000L
+Diy.menu.clock.1MHz=1 MHz
+Diy.menu.clock.1MHz.build.f_cpu=1000000L
+Diy.menu.clock.400KHz=400 KHz
+Diy.menu.clock.400KHz.build.f_cpu=400000L
+Diy.menu.clock.32KHz=32 KHz
+Diy.menu.clock.32KHz.build.f_cpu=32000L
+
+# Variants
+Diy.menu.variant.modelP48=LGT328P-LQFP48
+Diy.menu.variant.modelP48.bootloader.path=lgt8fx8p48
+Diy.menu.variant.modelP48.build.variant=lgt8fx8p48
+
+Diy.menu.variant.modelP=LGT328P-LQFP32
+Diy.menu.variant.modelP.bootloader.path=lgt8fx8p
+Diy.menu.variant.modelP.build.variant=lgt8fx8p
+
+Diy.menu.variant.modelP_SSOP20=LGT328P-SSOP20
+Diy.menu.variant.modelP_SSOP20.upload.speed=57600
+Diy.menu.variant.modelP_SSOP20.bootloader.path=lgt8fx8ps20
+Diy.menu.variant.modelP_SSOP20.build.variant=lgt8fx8ps20
+
+# Upload Speed
+Diy.menu.upload_speed.baud115200=115200
+Diy.menu.upload_speed.baud115200.upload.speed=115200
+Diy.menu.upload_speed.baud115200.bootloader.file={bootloader.path}/optiboot_lgt8f328p_115200_int32M.hex
+Diy.menu.upload_speed.baud57600=57600
+Diy.menu.upload_speed.baud57600.upload.speed=57600
+Diy.menu.upload_speed.baud57600.bootloader.file={bootloader.path}/optiboot_lgt8f328p.hex

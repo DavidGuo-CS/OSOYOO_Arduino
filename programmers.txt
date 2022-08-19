@@ -1,0 +1,17 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+lgtmkii.name=LGTSWD mkII as ISP
+lgtmkii.communication=usb
+lgtmkii.protocol=jtag2isp
+lgtmkii.program.protocol=jtag2isp
+lgtmkii.program.tool=avrdude
+lgtmkii.program.extra_params=-Pusb
+
+arduinoasisp.name=Arduino/OSOYOO as ISP(LGT328P)
+arduinoasisp.communication=serial
+arduinoasisp.protocol=stk500v1
+arduinoasisp.speed=19200
+arduinoasisp.program.protocol=stk500v1
+arduinoasisp.program.speed=19200
+arduinoasisp.program.tool=avrdude
+arduinoasisp.program.extra_params=-P{serial.port} -b{program.speed}

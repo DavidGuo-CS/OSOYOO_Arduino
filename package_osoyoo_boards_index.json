@@ -1,0 +1,114 @@
+{
+  "packages": [
+    {
+      "name": "OSOYOO avr compatible boards",
+      "maintainer": "osoyoo.com",
+      "websiteURL": "osoyoo.com",
+      "email": "david@vership.com",
+      "help": {
+        "online": "osoyoo.com"
+      },
+      "platforms": [
+        {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "2.0.0",
+          "category": "lgt8fx",
+          "url": "https://github.com/nulllaborg/arduino_nulllab/archive/master.zip",
+          "archiveFileName": "master.zip",
+          "help": {
+            "online": "https://github.com/nulllaborg/arduino_nulllab/issues"
+          },
+          "boards": [
+            {"name": "OSOYOO Mini-Nano"},
+            {"name": "OSOYOO LGT-Nano/Maker-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Orion"},
+            {"name": "DIY Boards"}
+          ]
+        },
+        {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "1.0.3",
+          "category": "lgt8fx",
+          "url": "https://github.com/nulllaborg/arduino_nulllab/releases/download/v1.0.3/nulllab_arduino-1.0.3.zip",
+          "archiveFileName": "nulllab_arduino-1.0.3.zip",
+          "checksum": "SHA-256:fbff13b98211d6de3987ea9f90794c0fa07950eb46e132561cbb4afafa2b2e5b",
+          "size": "1575248",
+          "help": {
+            "online": "https://github.com/nulllaborg/nulllab_arduino/issues"
+          },
+          "boards": [
+            {"name": "OSOYOO Mini-Nano"},
+            {"name": "OSOYOO LGT-Nano/Maker-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Orion"},
+            {"name": "DIY Boards"}
+          ]
+        },
+        {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "lgt8fx",
+          "url": "https://github.com/nulllaborg/arduino_nulllab/releases/download/v1.0.2/nulllab_arduino-1.0.2.zip",
+          "archiveFileName": "nulllab_arduino-1.0.2.zip",
+          "checksum": "SHA-256:2efb3f5806dfb995395ebc858ca1998dc74b70063fc168dad064d2dc94f87422",
+          "size": "3743744",
+          "help": {
+            "online": "https://github.com/nulllab/nulllab_arduino/issues"
+          },
+          "boards": [
+            {"name": "OSOYOO Mini-Nano"},
+            {"name": "OSOYOO LGT-Nano/Maker-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Orion"},
+            {"name": "DIY Boards"}
+          ]
+        },
+        {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "1.0.1",
+          "category": "lgt8fx",
+          "url": "https://github.com/nulllaborg/arduino_nulllab/releases/download/v1.0.1/nulllab_arduino-1.0.1.zip",
+          "archiveFileName": "nulllab_arduino-1.0.1.zip",
+          "checksum": "SHA-256:04f040d47e1ee28d19e727afef64a2f1d0b7499d35dedc2fc77c7c4e8066d6be",
+          "size": "3393538",
+          "help": {
+            "online": "https://github.com/nulllaborg/arduino_nulllab/issues"
+          },
+          "boards": [
+            {"name": "OSOYOO Mini-Nano"},
+            {"name": "OSOYOO LGT-Nano/Maker-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Orion"},
+            {"name": "DIY Boards"}
+          ]
+        },
+        {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "lgt8fx",
+          "url": "https://github.com/nulllaborg/arduino_nulllab/releases/download/v1.0.0/nulllab_arduino-1.0.0.zip",
+          "archiveFileName": "nulllab_arduino-1.0.0.zip",
+          "checksum": "SHA-256:73914adee0e1364abbfd35e919a7324d22beca7c589474f7e0a26ec62682408d",
+          "size": "3583176",
+          "help": {
+            "online": "https://github.com/nulllaborg/arduino_nulllab/issues"
+          },
+          "boards": [
+            {"name": "OSOYOO Mini-Nano"},
+            {"name": "OSOYOO LGT-Nano/Maker-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Orion"},
+            {"name": "DIY Boards"}
+          ]
+        }
+      ],
+      "tools": []
+    }
+  ]
+}
