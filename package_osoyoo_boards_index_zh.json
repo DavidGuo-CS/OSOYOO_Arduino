@@ -14,7 +14,7 @@
           "architecture": "avr",
           "version": "1.0.0",
           "category": "lgt8fx",
-          "url": "https://raw.githubusercontent.com/DavidGuo-CS/OSOYOO_Arduino/main/osoyoo_arduino-1.0.0.zip",
+          "url": "https://davidguo-cs.github.io/myboard/osoyoo_arduino-1.0.0.zip",
           "archiveFileName": "osoyoo_arduino-1.0.0.zip",
           "checksum": "SHA-256:4260670b894054a94f18b00f6a7c499eecb2faacd07dbfca0a5ccbb64c7e954b",
           "size": "2021041",
