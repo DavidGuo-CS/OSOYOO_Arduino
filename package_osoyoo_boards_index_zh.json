@@ -1,10 +1,10 @@
 {
   "packages": [
     {
-      "name": "OSOYOO avr compatible boards",
+      "name": "OSOYOO AVR compatible boards",
       "maintainer": "osoyoo.com",
       "websiteURL": "osoyoo.com",
-      "email": "david@osoyoo.com",
+      "email": "david@vership.com",
       "help": {
         "online": "osoyoo.com"
       },
@@ -14,12 +14,12 @@
           "architecture": "avr",
           "version": "1.0.0",
           "category": "lgt8fx",
-          "url": "https://raw.githubusercontent.com/DavidGuo-CS/OSOYOO_Arduino/main/osoyoo_arduino-1.0.0.zip",
+          "url": "https://gitee.com/davidgmx/OSOYOO_Arduino/raw/main/osoyoo_arduino-1.0.0.zip",
           "archiveFileName": "osoyoo_arduino-1.0.0.zip",
-          "checksum": "SHA-256:4260670b894054a94f18b00f6a7c499eecb2faacd07dbfca0a5ccbb64c7e954b",
-          "size": "1588177",
+          "checksum": "SHA-256:9ce1c4e42d06680d2ad22940419c208b2b3a99013ce20abae2850e0ed5974d2a",
+          "size": "2032911",
           "help": {
-            "online": "https://gitee.com/nulllab/nulllab_arduino/issues"
+            "online": "https://osoyoo.com"
           },
           "boards": [
             {"name": "OSOYOO Mini-Nano"},
