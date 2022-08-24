@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "OSOYOO avr compatible boards",
+      "name": "OSOYOO AVR compatible boards",
       "maintainer": "osoyoo.com",
       "websiteURL": "osoyoo.com",
       "email": "david@vership.com",
@@ -19,7 +19,7 @@
           "checksum": "SHA-256:4260670b894054a94f18b00f6a7c499eecb2faacd07dbfca0a5ccbb64c7e954b",
           "size": "2021041",
           "help": {
-            "online": "https://gitee.com/nulllab/nulllab_arduino/issues"
+            "online": "https://osoyoo.com"
           },
           "boards": [
             {"name": "OSOYOO Mini-Nano"},
