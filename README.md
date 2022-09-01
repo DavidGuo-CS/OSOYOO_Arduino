@@ -6,8 +6,8 @@ Arduino Boards Manager. This is the recommanded way of installation now.
 
 Start the Arduino-IDE. In *File->Preferences*, *Settings* tab, enter
 
-> https://raw.githubusercontent.com/nulllaborg/arduino_nulllab/master/package_nulllab_boards_index.json
-
+https://raw.githubusercontent.com/DavidGuo-CS/OSOYOO_Arduino/main/package_osoyoo_boards_index.json
+as an Additional Boards Manager URL.If the above website does not open, try another one：https://gitee.com/davidgmx/OSOYOO_Arduino/raw/main/package_osoyoo_boards_index_zh.json
 as an *Additional Boards Manager URL*.
 
 - Open *Tools->Board:...->Boards Manager*
