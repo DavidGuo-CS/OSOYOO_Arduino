@@ -149,9 +149,9 @@ void lgt8fx8x_init()
 #else
 
 #if defined(__LGT8F_SSOP20__)
-        GPIOR0 = PMXCR | 0x07;
-        PMXCR = 0x80;
-        PMXCR = GPIOR0;
+    GPIOR0 = PMX0 | 0x07;
+    PMX0 = 0x80;
+    PMX0 = GPIOR0;
 #endif
 
 	// enable 32KRC for WDT

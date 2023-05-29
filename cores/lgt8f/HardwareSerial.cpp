@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <inttypes.h>
+#include <util/atomic.h>
 #include "Arduino.h"
 
 #include "HardwareSerial.h"
@@ -76,21 +77,34 @@ void serialEventRun(void)
 #endif
 }
 
+// macro to guard critical sections when needed for large TX buffer sizes
+#if (SERIAL_TX_BUFFER_SIZE>256)
+#define TX_BUFFER_ATOMIC ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+#else
+#define TX_BUFFER_ATOMIC
+#endif
 // Actual interrupt handlers //////////////////////////////////////////////////////////////
 
 void HardwareSerial::_tx_udr_empty_irq(void)
 {
   // If interrupts are enabled, there must be more data in the output
   // buffer. Send the next byte
-  unsigned char c = _tx_buffer[_tx_buffer_tail];
+ // unsigned char c = _tx_buffer[_tx_buffer_tail];
+  *_udr = _tx_buffer[_tx_buffer_tail];
   _tx_buffer_tail = (_tx_buffer_tail + 1) % SERIAL_TX_BUFFER_SIZE;
 
-  *_udr = c;
+  //*_udr = c;
 
   // clear the TXC bit -- "can be cleared by writing a one to its bit
   // location". This makes sure flush() won't return until the bytes
-  // actually got written
-  sbi(*_ucsra, TXC0);
+  // actually got written. Other r/w bits are preserved, and zeroes
+  // written to the rest.
+
+#ifdef MPCM0
+  *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << MPCM0))) | (1 << TXC0);
+#else
+  *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << TXC0)));
+#endif
 
   if (_tx_buffer_head == _tx_buffer_tail) {
     // Buffer empty, so disable interrupts
@@ -103,7 +117,7 @@ void HardwareSerial::_tx_udr_empty_irq(void)
 void HardwareSerial::begin(unsigned long baud, byte config)
 {
   // Try u2x mode first
-  uint16_t baud_setting = (F_CPU / 4 / baud - 1) / 2;
+  uint16_t baud_setting = ((F_CPU / 4 / baud + 1) / 2) - 1;
   *_ucsra = 1 << U2X0;
 
   // hardcoded exception for 57600 for compatibility with the bootloader
@@ -111,10 +125,11 @@ void HardwareSerial::begin(unsigned long baud, byte config)
   // on the 8U2 on the Uno and Mega 2560. Also, The baud_setting cannot
   // be > 4095, so switch back to non-u2x mode if the baud rate is too
   // low.
-  if (((F_CPU == 16000000UL) && (baud == 57600)) || (baud_setting >4095))
+  if (((F_CPU == 16000000UL) && (baud == 57600)) || (baud_setting >4095) || ((F_CPU == 32000000UL) && (CLOCK_SOURCE == INT_OSC_32M)))
   {
     *_ucsra = 0;
-    baud_setting = (F_CPU / 8 / baud - 1) / 2;
+   // baud_setting = (F_CPU / 8 / baud - 1) / 2;
+   baud_setting = ((F_CPU / 8 / baud + 1) / 2) - 1;
   }
 
   // assign the baud_setting, a.k.a. ubrr (USART Baud Rate Register)
@@ -218,8 +233,14 @@ size_t HardwareSerial::write(uint8_t c)
   // significantly improve the effective datarate at high (>
   // 500kbit/s) bitrates, where interrupt overhead becomes a slowdown.
   if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
-    *_udr = c;
-    sbi(*_ucsra, TXC0);
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+      *_udr = c;
+#ifdef MPCM0
+      *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << MPCM0))) | (1 << TXC0);
+#else
+      *_ucsra = ((*_ucsra) & ((1 << U2X0) | (1 << TXC0)));
+#endif
+    }
     return 1;
   }
   tx_buffer_index_t i = (_tx_buffer_head + 1) % SERIAL_TX_BUFFER_SIZE;
@@ -233,16 +254,20 @@ size_t HardwareSerial::write(uint8_t c)
       // interrupt has happened and call the handler to free up
       // space for us.
       if(bit_is_set(*_ucsra, UDRE0))
-	_tx_udr_empty_irq();
+	        _tx_udr_empty_irq();
     } else {
       // nop, the interrupt handler will free up space for us
     }
   }
 
   _tx_buffer[_tx_buffer_head] = c;
-  _tx_buffer_head = i;
-	
-  sbi(*_ucsrb, UDRIE0);
+  // make atomic to prevent execution of ISR between setting the
+  // head pointer and setting the interrupt flag resulting in buffer
+  // retransmission
+  ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+    _tx_buffer_head = i;
+    sbi(*_ucsrb, UDRIE0);
+  }
   
   return 1;
 }

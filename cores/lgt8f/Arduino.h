@@ -320,6 +320,8 @@ long map(long, long, long, long, long);
 void sysClock(uint8_t mode);
 void sysClockPrescale(uint8_t div);
 void sysClockOutput(uint8_t enable);
+
+#define chip_uuid()  ((GUID3 << 24) | (GUID2 << 16) | (GUID1 << 8) | GUID0)
 // Log(HSP v3.7):
 //  - for system tick based on timer 2
 #if defined(TIMSK) && defined(TOIE2)

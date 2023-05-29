@@ -96,22 +96,35 @@ void PowerControl::sleep(pmu_t mode, period_t period)
     SREG = __bk_sreg;
 }
 
+void PowerControl::wdt_disable(void)
+{
+    uint8_t btmp;
+    // disable WDE
+    btmp = (WDTCSR | 0x90) & 0xF7;
+    WDTCSR = 0x18 | btmp;
+    WDTCSR = btmp;
+}
+void PowerControl::wdt_reset(void) {
+  __asm__ __volatile__ (
+    "wdr\n"
+  );
+}
 // enable wdt for periodly wake-up mode
 void PowerControl::enable_wdt(period_t period)
 {
     uint8_t btmp;
 
-    asm ("wdr");
+ //   asm ("wdr");
 
     // disable WDE
-    btmp = (WDTCSR | 0x90) & 0xF7;
-    WDTCSR = 0x18 | btmp;
-    WDTCSR = btmp;
+  //  btmp = (WDTCSR | 0x90) & 0xF7;
+ //   WDTCSR = 0x18 | btmp;
+ //   WDTCSR = btmp;
 
     // switch wdkclk to 32k
-    btmp = PMCR | 0x90;
-    PMCR = 0x80;
-    PMCR = btmp;
+  //  btmp = PMCR | 0x90;
+  //  PMCR = 0x80;
+  //  PMCR = btmp;
 
     // enable wdt
     btmp = period & 0x7;	// WPD[2:0]

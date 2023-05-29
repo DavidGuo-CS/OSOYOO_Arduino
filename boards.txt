@@ -9,14 +9,14 @@ menu.upload_speed=Upload Speed
 #menu.arduino_isp=Arduino as ISP
 
 #############################
-#### OSOYOO LGT Uno     ####
+#### LGT Uno     ####
 #############################
 
 Mango.name= OSOYOO LGT Uno
 Mango.upload.tool=avrdude
 Mango.upload.protocol=arduino
 Mango.build.eerom_size=1
-Mango.upload.maximum_size=30720
+Mango.upload.maximum_size=29696
 Mango.upload.maximum_data_size=2048
 Mango.upload.speed=115200
 Mango.bootloader.tool=avrdude
@@ -35,17 +35,17 @@ Mango.build.variant=lgt8fx8p
 Mango.build.board=AVR_LARDU_328E
 
 #############################
-#### Nano     ####
+#### LGT Nano     ####
 #############################
 
-Nano.name= OSOYOO LGT-Nano/Maker-Nano
+Nano.name= OSOYOO LGT-Nano
 Nano.vid.0=0x2341
 Nano.pid.0=0x0137
 
 Nano.upload.tool=avrdude
 Nano.upload.protocol=arduino
 Nano.build.eerom_size=1
-Nano.upload.maximum_size=30720
+Nano.upload.maximum_size=29696
 Nano.upload.maximum_data_size=2048
 Nano.upload.speed=115200
 Nano.bootloader.tool=avrdude
@@ -64,14 +64,14 @@ Nano.build.variant=lgt8fx8p
 Nano.build.board=AVR_LARDU_328E
 
 #############################
-#### OSOYOO Mini-Nano      ####
+#### LGT-MINI      ####
 #############################
 
-Mini.name= OSOYOO Mini-Nano
+Mini.name= OSOYOO LGT-Mini
 Mini.upload.tool=avrdude
 Mini.upload.protocol=arduino
 Mini.build.eerom_size=1
-Mini.upload.maximum_size=30720
+Mini.upload.maximum_size=29696
 Mini.upload.maximum_data_size=2048
 Mini.upload.speed=57600
 Mini.bootloader.tool=avrdude

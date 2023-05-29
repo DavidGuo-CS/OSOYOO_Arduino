@@ -92,10 +92,12 @@ static const uint8_t A5 = 19;
 #if defined(__LGT8FX8E__) || defined(__LGT8FX8P__)
 static const uint8_t A6 = 20;
 static const uint8_t A7 = 21;
+static const uint8_t A10 = 25;
+
 #if defined(__LGT8FX8P48__)
 static const uint8_t A8 = 23;
 static const uint8_t A9 = 24;
-static const uint8_t A10 = 25;
+//static const uint8_t A10 = 25;
 static const uint8_t A11 = 26;
 #endif
 #endif
@@ -116,13 +118,6 @@ static const uint8_t A11 = 26;
 #define D12	12	/* PB4 */
 #define D13	13	/* PB5 */
 
-#define C0	14
-#define C1	15
-#define C2	16
-#define C3	17
-#define C4	18
-#define C5	19
-
 #define D14	14	/* PC0 */
 #define D15	15	/* PC1 */
 #define D16	16	/* PC2 */
@@ -135,12 +130,13 @@ static const uint8_t A11 = 26;
 #define E3	21	/* A7 */
 #define D20	20	/* A6 */
 #define D21	21	/* A7 */
+
 #if defined(__LGT8FX8P48__)
 #define C7	23
 #define	F0	24
 #define	E6	25
 #define	E7	26
-#define D22 	22	/* PB6 */
+//#define D22 	22	/* PB6 */
 #define D23 	23	/* A8 - PC7 */
 #define D24 	24	/* A9 - PF0 */
 #define D25 	25	/* A10 - PE6 */
@@ -158,7 +154,7 @@ static const uint8_t A11 = 26;
 #define	F6	38
 #define	F7	39
 
-#define D27	27	/* PB7 */
+//#define D27	27	/* PB7 */
 #define	D28	28	/* PC6 */
 #define D29	29 	/* PE0 */
 #define D30	30	/* PE2 */
@@ -183,6 +179,9 @@ static const uint8_t A11 = 26;
 #define D24	24	/* PE4 */
 #define D25	25	/* PE5 */
 #define D26	26	/* PE6 */
+#define D27 27	/* PB6 */
+#define D28	28	/* PB7 */
+
 #endif
 #endif
 
@@ -330,6 +329,8 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PE, /* 24 */
 	PE, /* 25 */
 	PE, /* 26 */
+	PB, /* 27 */
+	PB, /* 28 */
 #endif
 #endif
 };
@@ -383,6 +384,8 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV(4), /* 24, port E4 */
 	_BV(5), /* 25, port E5 */
 	_BV(6), /* 26, port E6 */
+	_BV(6), /* 27, port B6 */
+	_BV(7), /* 28, port B7 */
 #endif
 #endif
 };

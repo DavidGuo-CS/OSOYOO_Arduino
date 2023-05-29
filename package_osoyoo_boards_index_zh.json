@@ -1,36 +1,52 @@
 {
   "packages": [
     {
-      "name": "OSOYOO AVR compatible boards",
+      "name": "OSOYOO avr compatible boards",
       "maintainer": "osoyoo.com",
-      "websiteURL": "osoyoo.com",
-      "email": "david@vership.com",
+      "websiteURL": "https://osoyoo.com/2022/08/04/osoyoo-lgt-nano-board/",
+      "email": "support@osoyoo.com",
       "help": {
-        "online": "osoyoo.com"
+        "online": "www.osoyoo.com"
       },
       "platforms": [
+	       {
+          "name": "OSOYOO AVR Compatible Boards",
+          "architecture": "avr",
+          "version": "2.0.0",
+          "category": "lgt8fx",
+          "url": "https://osoyoo.com/driver/lgt_driver/OSOYOO_Arduino_v2.0.zip",
+          "archiveFileName": "OSOYOO_Arduino_v2.0.zip",
+          "checksum": "SHA-256:cbe465aa180aaf07c64c16dd60b8b13dc3d8377173fb6c94168c6270a19b7b98",
+          "size": "2040055",
+          "help": {
+            "online": "https://osoyoo.com/2022/08/04/osoyoo-lgt-nano-board/"
+          },
+          "boards": [
+            {"name": "OSOYOO LGT-Mini"},
+            {"name": "OSOYOO LGT-Nano"},
+            {"name": "OSOYOO LGT Uno"},
+            {"name": "DIY Boards"}
+          ]
+        },
         {
           "name": "OSOYOO AVR Compatible Boards",
           "architecture": "avr",
           "version": "1.0.0",
           "category": "lgt8fx",
-          "url": "https://gitee.com/davidgmx/OSOYOO_Arduino/raw/main/osoyoo_arduino-1.0.0.zip",
+          "url": "https://osoyoo.com/driver/lgt_driver/osoyoo_arduino-1.0.0.zip",
           "archiveFileName": "osoyoo_arduino-1.0.0.zip",
-          "checksum": "SHA-256:9ce1c4e42d06680d2ad22940419c208b2b3a99013ce20abae2850e0ed5974d2a",
-          "size": "26354",
-
+          "checksum": "SHA-256:4260670b894054a94f18b00f6a7c499eecb2faacd07dbfca0a5ccbb64c7e954b",
+          "size": "2021041",
           "help": {
-            "online": "https://osoyoo.com"
+            "online": "https://osoyoo.com/2022/08/04/osoyoo-lgt-nano-board/"
           },
           "boards": [
             {"name": "OSOYOO Mini-Nano"},
             {"name": "OSOYOO LGT-Nano"},
-            {"name": "OSOYOO LGT Uno"},
+            {"name": "OSOYOO Uno"},
             {"name": "DIY Boards"}
           ]
         }
-        
-       
       ],
       "tools": []
     }

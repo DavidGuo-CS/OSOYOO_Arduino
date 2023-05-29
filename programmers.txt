@@ -7,7 +7,7 @@ lgtmkii.program.protocol=jtag2isp
 lgtmkii.program.tool=avrdude
 lgtmkii.program.extra_params=-Pusb
 
-arduinoasisp.name=Arduino/OSOYOO as ISP(LGT328P)
+arduinoasisp.name=Arduino/OSOYOO as ISP(LGT8F328P)
 arduinoasisp.communication=serial
 arduinoasisp.protocol=stk500v1
 arduinoasisp.speed=19200
@@ -15,3 +15,12 @@ arduinoasisp.program.protocol=stk500v1
 arduinoasisp.program.speed=19200
 arduinoasisp.program.tool=avrdude
 arduinoasisp.program.extra_params=-P{serial.port} -b{program.speed}
+
+nulllab_lgtswd_asisp.name=OSOYOO-CH5xxDuino as ISP
+nulllab_lgtswd_asisp.communication=serial
+nulllab_lgtswd_asisp.protocol=stk500v1
+nulllab_lgtswd_asisp.speed=1000000
+nulllab_lgtswd_asisp.program.protocol=stk500v1
+nulllab_lgtswd_asisp.program.speed=1000000
+nulllab_lgtswd_asisp.program.tool=avrdude
+nulllab_lgtswd_asisp.program.extra_params=-P{serial.port} -b{program.speed}

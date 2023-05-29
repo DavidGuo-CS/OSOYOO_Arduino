@@ -98,13 +98,14 @@ private:
     void resume(pmu_t mode, period_t period);
     void clock_switch(pmu_t mode);
     void do_sleep(pmu_t mode);
-
-
-    void enable_wdt(period_t period);
+  //  void enable_wdt(period_t period);
     void enable_rc32k(bool wcs = 0);
 
 public:
     PowerControl();
+    void wdt_reset(void);
+    void enable_wdt(period_t period);
+    void wdt_disable(void);
     void set_lvd(lvd_t lvd);
     void soft_reset(void);
     void sleep(pmu_t mode, period_t period = SLEEP_FOREVER);
