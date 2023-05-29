@@ -89,31 +89,6 @@ Mini.build.core=lgt8f
 Mini.build.variant=lgt8fx8p
 Mini.build.board=AVR_LARDU_328E
 
-#############################
-#### OSOYOO Orion      ####
-#############################
-Orion.name= OSOYOO Orion
-Orion.upload.tool=avrdude
-Orion.upload.protocol=arduino
-Orion.build.eerom_size=1
-Orion.upload.maximum_size=30720
-Orion.upload.maximum_data_size=2048
-Orion.upload.speed=57600
-Orion.bootloader.tool=avrdude
-Orion.bootloader.high_fuses=0xff
-Orion.bootloader.low_fuses=0xff
-Orion.bootloader.extended_fuses=0x07
-Orion.bootloader.path=lgt8fx8p48
-Orion.bootloader.file=lgt8fx8p48/optiboot_lgt8f328p.hex
-Orion.bootloader.unlock_bits=0x3f
-Orion.bootloader.lock_bits=0x3f
-Orion.build.mcu=atmega328p
-Orion.build.clock_source=2
-Orion.build.f_cpu=32000000L
-#Orion.build.f_cpu=16000000L
-Orion.build.core=lgt8f
-Orion.build.variant=lgt8fx8p48
-Orion.build.board=AVR_LARDU_328E
 
 #############################
 #### Diy Board     ####
